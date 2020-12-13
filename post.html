@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Post One</title>
+  </head>
+  <body id="home">
+    <header class="hero blog">
+      <div id="navbar" class="navbar top">
+        <h1 class="logo">
+          <span class="text-primary">
+            <i class="fas fa-book-open"></i> Sign</span
+          >Wave
+        </h1>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#cases">Cases</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content">
+        <h1>Blog</h1>
+    </header>
+
+    <main>
+      <section class="post">
+        <h2>Blog Post One</h2>
+        <p class="meta">
+          <i class="fas fa-user"></i> Posted by <strong>Aaron Swartz</strong> | December 9th, 2020
+        </p>
+        <img src="./images/pexels-ricardo-esquivel-2061212.jpg" alt="" srcset="">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, nisi officiis quia, incidunt illo, odio adipisci quod laudantium enim explicabo vel doloribus. Repellendus, ex aliquid?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid accusamus ab voluptatibus expedita animi amet ad autem optio ipsa, beatae neque modi incidunt consequuntur nam totam obcaecati, eos iusto eum aperiam minima harum? Magnam hic cum quis incidunt modi necessitatibus veniam, vitae quia, harum sequi, deserunt illum tempora corrupti deleniti?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci saepe quibusdam fugit, voluptates cum voluptatum! Unde qui officiis dicta magnam tempora itaque tenetur ad modi asperiores dolore laboriosam quo sequi consequatur in ducimus illo distinctio ea hic aliquid, ut rerum! Numquam autem mollitia eum recusandae?
+        </p>
+      
+      </section>
+    </main>
+
+    <footer>
+      <footer class="footer bg-dark">
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>SignWave Creative Commons &copy; 2020</p>
+      </footer>
+    </footer>
+    <script>
+      const navbar = document.getElementById("navbar");
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+
+      // $('#navbar a, .btn').on('click', function (e) {
+      //   if (this.hash !== '') {
+      //     e.preventDefault();
+
+      //     const hash = this.hash;
+
+      //     $('html, body').animate(this{
+      //       scrollTop: $(hash).offset().top -100,
+      //     },
+      //     800
+      //     );
+      //   }
+      // })
+    </script>
+  </body>
+</html>
